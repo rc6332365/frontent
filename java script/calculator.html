@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .p1 {
+            margin: 20px;
+            padding: 20px;
+            margin: 20px;
+            padding: 10px;
+            text-decoration: dashed;
+        }
+        .d1 {
+         background:red;
+        }
+        .d2 {
+         background:green;
+        }
+        .d3 {
+         background:yellow;
+        }
+        .d4 {
+         background:blue;
+        }
+        
+        .btn1 {
+            background:red;
+        }
+        .btn2 {
+            background:green;
+        }
+        .btn3 {
+            background:yellow;
+        }
+        .btn4 {
+            background:blue;
+        }
+        #output {
+            margin: 10px;
+            width: 10%;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Calculator Example</h1>
+    <hr>
+
+    <div align="center" class="flex">
+        <input type="number" name="number" id="number_a" placeholder="Enter first number" required />
+        <input type="number" name="number_1" id="number_b" placeholder="Enter second number" required />
+        <div id="output">
+
+        </div>
+
+    </div>
+   
+    <div class="btn" align="center">
+        <button type="button" class="btn1" onclick="addValue()">add</button>
+        <button type="button" class="btn2" onclick="subValue()">sub</button>
+        <button type="button" class="btn3" onclick="multiValue()">multi</button>
+        <button type="button" class="btn4" onclick="divValue()">div</button>
+    </div>
+
+    <script>
+        const num = document.getElementById("number_a").value
+        const num_1 = document.getElementById("number_b").value
+        // console.log(number);
+        // console.log(number_1);
+
+        let a = parseInt(num)
+        let b = parseInt(num_1)
+        // console.log(a);
+        // console.log(b);
+        
+        var add = a + b
+        var sub = a - b
+        var multi = a * b
+        var div = a / b
+       
+        function addValue() {
+            // console.log("addvalue");
+            document.getElementById('output').innerHTML = `
+                    <div class="d1"> ${add} </div>
+                `
+
+        }
+        function subValue() {
+            // console.log("addvalue");
+            document.getElementById('output').innerHTML = `
+                    <div class="d2"> ${sub} </div>
+                `
+        }
+        function multiValue() {
+            // console.log("addvalue");
+            document.getElementById('output').innerHTML = `
+                    <div class="d3"> ${multi} </div>
+                `
+        }
+        function divValue() {
+            // console.log("addvalue");
+            document.getElementById('output').innerHTML = `
+                    <div class="d4"> ${div} </div>
+                `
+        }
+    </script>
+</body>
+
+</html>

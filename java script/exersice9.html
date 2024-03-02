@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+
+        height: 300px;
+        border: 5px solid gray;
+        border-radius: 10px;
+        width: 300px;
+        margin: 70px auto;
+    }
+
+    .grandparent {
+        background-color: rgb(35, 35, 232);
+    }
+
+    .parent {
+        background: rgb(132, 132, 216);
+        width: 200px;
+        height: 200px;
+    }
+
+    .children {
+        background: rgb(225, 225, 237);
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="grandparent" id="grandparent">
+        <div class="parent" id="parent">
+            <div class="children" id="child">
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var grandparent = document.getElementById('grandparent');
+        var parent = document.getElementById('parent');
+        var children = document.getElementById('child');
+
+        grandparent.addEventListener("click", function () {
+            console.log("grandparent cklick");
+            grandparent.removeEventListener("click", grandparent, true);
+            console.log("click event remove")
+        }, true);
+
+        parent.addEventListener("click", function () {
+            console.log("parent cklick");
+            parent.removeEventListener("click", parent, true);
+            console.log("click event remove")
+        }, true);
+
+        children.addEventListener("click", function () {
+            console.log("children cklick");
+            children.removeEventListener("click", children, true);
+            console.log("click event remove")
+        }, true);
+
+    </script>
+</body>
+
+</html>

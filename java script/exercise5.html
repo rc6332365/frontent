@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="body text-bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="card shadow mt-3">
+                    <div class="card-heard h2 p2 text-bg-primary text-center">
+                        regestration
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 mt-3">
+                                <label for="name" class="form-label"> Enter Your Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter Your Name"
+                                    class="form-control">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="contact" class="form-label"> Enter Your mobile Number</label>
+                                <input type="number" name="number" id="contact" placeholder="Enter Your number"
+                                    class="form-control">
+                                <span id="error_message" class="text-danger ms-3">
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mt-3">
+                                <label for="email" class="form-label"> Enter Your Email</label>
+                                <input type="email" name="email" id="email" placeholder="Enter Your email"
+                                    class="form-control">
+                                <span id="email_message" class="text-danger ms-3">
+
+                                </span>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="password" class="form-label"> Enter Your password</label>
+                                <input type="password" name="password" id="password" placeholder="Enter Your password"
+                                    class="form-control">
+                                <span id="error_password" class="text-danger ms-3">
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mt-4">
+                                <label for="city" class="form-label">Enter Your City</label>
+                                <input type="text" name="city" id="city" class="form-control">
+                            </div>
+                            <div class="col-4 mt-4">
+                                <label for="state" class="form-label">Select Your State</label>
+                                <select name="state" id="state" class="form-select">
+                                    <option value="1">gujrat</option>
+                                    <option value="2">kerela</option>
+                                    <option value="3">maharastra</option>
+                                    <option value="4">madhyprdesh</option>
+                                    <option value="5">rajasthan</option>
+                                    <option value="6">chhatisgadh</option>
+                                    <option value="7">tamilnadu</option>
+                                </select>
+                            </div>
+                            <div class="col-4 mt-4">
+                                <label for="pincode" class="form-label">pincode</label>
+                                <input type="number" name="pincode" id="pincode" class="form-control">
+                                <span id="error_pincode" class="text-danger ms-3">
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <label for="address" class="form-label">Enter Your Address</label>
+                                <textarea name="address" id="address" cols="10" rows="5"
+                                    class="form-control">address</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3 text-end">
+                                <button class="btn btn-primary" onclick="validate()">submit </button>
+                                <button class="btn btn-danger">clearall</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script5.js"></script>
+</body>
+
+</html>

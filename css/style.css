@@ -1,0 +1,28 @@
+#box{
+    background-color: skyblue;
+    /* color: white */
+   
+}
+.heading{
+    color: red;
+}
+h1,h2,h3{
+    background-color: yellow;
+}
+button{
+    color: green;
+    background: white;
+}
+p{
+    text-align: left;
+}
+div>h3{
+    background: blue;
+}
+a{
+    text-decoration: underline;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}

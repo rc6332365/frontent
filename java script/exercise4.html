@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-3">
+                    <div class="card-header h2 text-bg-primary">
+                        table
+                    </div>
+                    <div class="card-body">
+                        <form action="" onsubmit="return submited()">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="number" class="form-label">
+                                        Enter First Number
+                                    </label>
+                                    <input type="number" name="number" id="number" placeholder="Enter First Number" class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <label for="number1" class="form-label">
+                                        Enter Last Number
+                                    </label>
+                                    <input type="number" name="number" id="number1" placeholder="Enter Last Number" class="form-control">
+                                </div>
+                                <div class="col-12 mt-5 text-center">
+                                    <input type="submit" value="submit" class="btn btn-primary">
+                                    <button type="reset" onclick="clearall()" class="btn btn-danger">Clear All</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header h2 text-bg-primary">
+                        table
+                    </div>
+                    <div class="card-body" id="output">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <script>
+            function submited()
+            {
+
+              //  console.log("function is called");
+              var number = parseInt(document.getElementById("number").value);
+              var number1 = parseInt(document.getElementById("number1").value);
+              var table = document.getElementById("output").innerHTML;
+              table = `<div class="row">`;
+                for(var i=number;i<=number1;i++)
+                {
+                    table += `<div class="col-3"><table class="table table-bordered table-hover table-primary table-stried">`;
+                    for(var j=1;j<=10;j++)
+                    {
+                        table += `<tr>`;
+                        table += `<td>` + i + ` * ` + j + ` = ` + (j*i) + `</td></tr>`;
+                    }
+                    table += `</table></div>`;
+                }
+                table += `</div>`;
+                document.getElementById("output").innerHTML += table;
+                return false;
+
+            }
+            function clearall(){
+                document.getElementById("output").innerHTML = '';
+             return false
+            }
+        </script>
+</body>
+</html>
