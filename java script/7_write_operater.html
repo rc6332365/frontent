@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Example of document.write</h1>
+    <script>
+    //accept two number from user
+
+    var num1 = prompt("Enter 1st value");
+    var num2 = prompt("Enter 2st value");
+
+    //convert stirng to integer
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
+    
+    //add, mult.sub,divide.........
+    var addition = num1 + num2;
+    var subscription = num1 - num2;
+    var multiplication = num1 * num2;
+    var division = num1 / num2;
+    var output = `<table align="center" border="1" cellpadding="5" cellspacing="5">`;
+        output = output + `<tr>`;
+        output = output + `<th>addition</th>`;
+        output = output + `<th>subscription</th>`;
+        output = output + `<th>multiplication</th>`;
+        output = output + `<th>division</th>`;
+        output = output + `</tr>`;
+        output = output + `<tr>`;
+        output = output + `<th>${addition}</th>`;
+        output = output + `<th>${subscription}</th>`;
+        output = output + `<th>${multiplication}</th>`;
+        output = output + `<th>${division}</th>`;
+        output = output + `</tr>`;
+        output = output + `</table>`;
+        document.write(output);    
+    </script>
+</body>
+</html>
